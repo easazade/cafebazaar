@@ -3,6 +3,7 @@ package ir.easazade.cafebazaar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import io.flutter.plugin.common.MethodCall;
@@ -15,8 +16,9 @@ public class CafeBazaarDelegate implements MethodCallHandler, PluginRegistry.Act
   private Context activity;
 
 
-  public CafeBazaarDelegate(final Activity activity) {
+  public CafeBazaarDelegate(Activity activity) {
     this.activity = activity;
+    Log.d("tagtag", activity.toString());
   }
 
   @Override
@@ -27,7 +29,7 @@ public class CafeBazaarDelegate implements MethodCallHandler, PluginRegistry.Act
   @Override
   public void onMethodCall(@NonNull final MethodCall call, @NonNull final Result result) {
     if (call.method.equals("getPlatformVersion")) {
-      result.success("Android " + android.os.Build.VERSION.RELEASE);
+      result.success("Android " + activity.toString());
     } else if (call.method.equals("showToast")) {
       Toast.makeText(activity, "this is a toast form native code", Toast.LENGTH_SHORT).show();
     } else {
