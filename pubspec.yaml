@@ -1,8 +1,7 @@
 name: cafebazaar
-description: A new Flutter plugin.
-version: 0.0.1
-author:
-homepage:
+description: flutter plugin for cafebazaar android market (only works on android obviously)
+version: 0.9.0
+homepage: https://github.com/easazade/cafebazaar
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
