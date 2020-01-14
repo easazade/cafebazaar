@@ -26,7 +26,15 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       platformVersion = await Cafebazaar.platformVersion;
+      bool hasUpdate = await Cafebazaar.isUpdateAvailable();
+      if(hasUpdate){
+        print("has update");
+      }else{
+        print("no update");
+      }
       Cafebazaar.showToast();
+//      Cafebazaar.commentOnBazaar();
+      Cafebazaar.goToAppPageOnBazaar();
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

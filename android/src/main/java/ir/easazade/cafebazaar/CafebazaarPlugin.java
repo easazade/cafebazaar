@@ -117,6 +117,7 @@ public class CafebazaarPlugin implements FlutterPlugin, ActivityAware {
     activityBinding = null;
 //    lifecycle.removeObserver(observer);
 //    lifecycle = null;
+    delegate.tearDown();
     delegate = null;
     channel.setMethodCallHandler(null);
     channel = null;
