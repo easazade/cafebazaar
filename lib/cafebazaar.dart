@@ -10,12 +10,11 @@ class Cafebazaar {
     return hasUpdate;
   }
 
-  static Future<void> goToAppPageOnBazaar() async{
+  static Future<void> goToAppPageOnBazaar() async {
     await _channel.invokeMethod("goToAppPageOnBazaar");
   }
 
-  static Future<void> commentOnBazaar() async{
+  static Future<void> commentOnBazaar() async {
     await _channel.invokeMethod("commentOnBazaar");
   }
-
 }

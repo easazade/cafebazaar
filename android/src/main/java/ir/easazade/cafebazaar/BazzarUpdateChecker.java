@@ -23,8 +23,8 @@ class BazzarUpdateChecker implements ServiceConnection {
     this.activity = activity;
     Intent intent = new Intent("com.farsitel.bazaar.service.UpdateCheckService.BIND");
     intent.setPackage("com.farsitel.bazaar");
-    Intent explicitIntent = convertImplicitIntentToExplicitIntent(activity.getPackageManager(), intent);
-    activity.bindService(explicitIntent, this, Context.BIND_AUTO_CREATE);
+//    Intent explicitIntent = convertImplicitIntentToExplicitIntent(activity.getPackageManager(), intent);
+    activity.bindService(intent, this, Context.BIND_AUTO_CREATE);
   }
 
   @Override
