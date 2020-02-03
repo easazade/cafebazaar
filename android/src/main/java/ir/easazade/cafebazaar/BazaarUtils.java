@@ -13,7 +13,7 @@ public class BazaarUtils {
     if (appPackageName != null) {
       try {
         Intent intent = new Intent(Intent.ACTION_EDIT);
-        intent.setData(Uri.parse("bazaar://details?id=$appPackageName"));
+        intent.setData(Uri.parse("bazaar://details?id=" + appPackageName));
         intent.setPackage(bazzarPackageName);
         activity.startActivity(intent);
       } catch (Exception e) {
@@ -25,7 +25,7 @@ public class BazaarUtils {
   static void goToAppPageOnBazaar(Activity activity) {
     try {
       Intent intent = new Intent(Intent.ACTION_VIEW);
-      intent.setData(Uri.parse("bazaar://details?id=${activity.packageName}"));
+      intent.setData(Uri.parse("bazaar://details?id=" + activity.getApplication().getPackageName()));
       intent.setPackage("com.farsitel.bazaar");
       activity.startActivity(intent);
     } catch (Exception e) {

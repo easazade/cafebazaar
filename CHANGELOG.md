@@ -1,3 +1,11 @@
+## 0.9.3
+
+* bug fixes : fixing some bugs
+
+## 0.9.2
+
+* bug fix : (crashes on some android devices when app was starting up)
+
 ## 0.9.1
 
 * removing unnecessary functions
